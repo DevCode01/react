@@ -1,14 +1,14 @@
 import React from 'react'
-import './App.css';
-import Home from './components/home'
-import Menus from './components/menus'
-
+import '../App.css';
+import Contacts from './addArticle'
+import Menus from './menus'
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
+      menu: ["Home", "About", "Blogs"]
     }
   }
 
@@ -19,21 +19,19 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log("Component did mount")
-    this.setState({
-      articles: localStorage.getItem('articles')
-    })
   }
 
   render() {
     return (
       <div>
-       <head className="App-header">
+        <head className="App-header">
           <Menus menus={this.state.menus} />
         </head>
         <br></br><br></br><br></br>
         <body>
-          <Home home={this.props.home} />
+          <Contacts contacts={this.state.contacts} />
         </body>
+        <footer>&copy; Copyright 2021, Example Corporation</footer>
       </div>
     );
   }
