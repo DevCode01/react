@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css';
 import * as fromUserAPI from '../api/articles'
-import { BrowserRouter, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
@@ -64,9 +64,7 @@ class Home extends React.Component {
                                     <div class="card-body">
                                         <h5 class="card-title">{u.nomArticle}</h5>
                                         <p class="card-text">{u.descriptionArticle}</p>
-                                        <BrowserRouter>
                                             <Link class="btn btn-primary" to="/page2">Voir la catégorie correspondante</Link>
-                                        </BrowserRouter>
                                     </div>
 
                                 </div>
@@ -90,11 +88,8 @@ class Home extends React.Component {
                                     <div class="card-body">
                                         <h5 class="card-title">{u.nomArticle}</h5>
                                         <p class="card-text">{u.descriptionArticle}</p>
-                                        <BrowserRouter>
                                         <Link class="btn btn-primary" to="/page3">Voir la catégorie correspondante</Link>
-                                        </BrowserRouter>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
